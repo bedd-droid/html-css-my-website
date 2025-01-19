@@ -20,7 +20,7 @@
 
   --judul-font: 'Bruno Ace Sc', sans-serif;
   --main-font: 'Nunito Sans', sans-serif;
-  --h1-font: 6rem;
+  --h1-font: 2.5rem;
   --h2-font: 3.8rem;
   --p-font: 1.1rem;
 }
@@ -131,27 +131,113 @@ header{
   opacity: 7;
   }
 
-
-/* .menu-btn{
-  display: inline-block;
-  font-family: var(--main-font);
-  padding: 7px 7px;
-  margin-right: 15px;
-  background: linear-gradient(45deg, var(--alt-color), var(--ann-color));
-  font-size: 15px;
-  font-weight: 500;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.menu-btn:hover{
-  background: linear-gradient(45deg, var(--ann-color), var(--alt-color));
-} */
-
-
 #menu-icon{
   z-index: 10001;
   font-size: 25px;
   margin-left: 25px;
   cursor: pointer;
+}
+
+section{
+  padding: 110px 10% 90px;
+}
+
+.home{
+  /* height: 100vh;
+  width: 100%;
+  background: url(/image/pixellab-profile.png);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} 
+
+.image-container{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items:center;
+}
+
+.image-container img{
+  width: 450px;
+  height: auto;
+  /* margin: 10px 10px; */
+} 
+
+.home-text{
+  padding-top: 30px;
+}
+
+.h-line{
+  display: inline-block;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid var(--other-color);
+  border-radius: 20px;
+  font-family: var(--main-font);
+  font-size: var(--p-font);
+  color: var(--text-color);
+  transition: all.6s ease;
+}
+
+.h-line:hover{
+  color: var(--ann-color);
+}
+
+.home-text h1{
+  margin: 10px 0;
+  font-size: var(--h1-font);
+  font-family: var(--judul-font);
+  font-weight: 300;
+}
+
+.home-text h1 span1 {
+  background-image: -webkit-linear-gradient(45deg, #0138a5, #45c3f9, #86dbff);
+  --webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* --webkit-text-fill-color: transparent; */
+  animation: hue 10s infinite linear;
+}
+
+@keyframes hue {
+  from{
+    filter: hue-rotate(0deg);
+  }
+  to{
+    filter: hue-rotate(-360deg);
+  }
+}
+
+.home-text h4{
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+
+.social-icon a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: 1px solid var(--ann-color);
+  color: var(--text-color);
+  border-radius: 1.7rem;
+  font-size: 18px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  transition: all .6s ease;
+}
+
+.social-icon a:hover{
+   color: var(--second-bg-color);
+   background: -webkit-linear-gradient(45deg, #0138a5, #45c3f9, #86dbff);
+  box-shadow: 0 0 20px 10px rgba(0, 55, 255, 0.5);
 }
