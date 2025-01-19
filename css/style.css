@@ -1,0 +1,157 @@
+/* MANGGIL ID PAKE # JADI TIDAK PERLU TAMBAHAN DIV CLASS DI HTML */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --bg-color: #402E7A;
+  --second-bg-color: #1a1331;
+  --text-color: #ffffff;
+  --main-color: #4C3BCF;
+  --main2-color: #4B70F5;
+  --other-color: #3DC2EC;
+  --alt-color: #66effe;
+  --ann-color: #b0fcfd;
+
+  --judul-font: 'Bruno Ace Sc', sans-serif;
+  --main-font: 'Nunito Sans', sans-serif;
+  --h1-font: 6rem;
+  --h2-font: 3.8rem;
+  --p-font: 1.1rem;
+}
+
+body{
+  background: var(--second-bg-color);
+  color: var(--text-color);
+}
+
+.logo{
+  font-family: var(--judul-font);
+  font-size: 2rem;
+  color: var(--text-color);
+  object-fit: contain;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px 10%;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .6s ease;
+}
+
+.menulist a{
+  font-family: var(--main-font);
+  display: inline-block;
+  font-size: 15px;
+  color: var(--ann-color);
+  margin: 0 30px;
+  transition: all .6s ease;
+}
+
+.menulist a:hover{
+  background-color: var(--ann-color);
+  padding: 5px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--second-bg-color);
+}
+
+.menulist a.active{
+  background-color: var(--ann-color);
+  padding: 5px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--second-bg-color);
+}
+
+.menu-right{
+  display: flex;
+  align-items: center;
+}
+
+
+.menu-btn{
+  font-family: var(--main-font);
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  background: linear-gradient(45deg, #0138a5, #45c3f9, #0081b8);
+  padding: 7px 7px; 
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  position: relative;
+  z-index: 2000;
+}
+
+.menu-btn i {
+  position: relative;
+  z-index: 2000;
+}
+
+.menu-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--second-bg-color);
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.menu-btn:hover::before {
+  opacity: 0.7;
+}
+
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0138a5, #45c3f9, #0081b8);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.menu-btn:hover:after {
+  opacity: 7;
+  }
+
+
+/* .menu-btn{
+  display: inline-block;
+  font-family: var(--main-font);
+  padding: 7px 7px;
+  margin-right: 15px;
+  background: linear-gradient(45deg, var(--alt-color), var(--ann-color));
+  font-size: 15px;
+  font-weight: 500;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menu-btn:hover{
+  background: linear-gradient(45deg, var(--ann-color), var(--alt-color));
+} */
+
+
+#menu-icon{
+  z-index: 10001;
+  font-size: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+}
